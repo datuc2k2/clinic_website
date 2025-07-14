@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách dịch vụ Sun Medical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: rgba(61, 157, 241, 0.03);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .sub-title {
+            color: #f15a24;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            margin-bottom:0px;
+        }
+
+        .main-title {
+            font-size: 28px;
+            color: #1e1e1e;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .search-box {
+            display: flex;
+            display: inline-flex;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 4px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            width: fit-content;
+        }
+
+        .search-input {
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            border-radius: 4px;
+        }
+
+            .search-input .icon-heart {
+                color: #ff6600;
+                margin-right: 8px;
+                font-size: 16px;
+            }
+
+            .search-input input {
+                border: none;
+                outline: none;
+                width: 400px;
+            }
+
+        .search-button {
+            background-color: #f15a24;
+            color: white;
+            border: none;
+            padding: 8px 26px;
+            cursor: pointer;border-radius:4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.3s ease;
+        }
+
+            .search-button:hover {
+                background-color: #e14d1f;
+            }
+
+
+        .service-grid {
+            margin-top:30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap:30px;
+        }
+
+        .service-card {
+            background-color: white;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+            .service-card img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+        .service-content {
+            padding: 16px;
+        }
+
+            .service-content h3 {
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+
+            .service-content p {
+                
+                color: #555;
+                line-height: 1.4;
+            }
+
+        /* Style for the featured card (dược phẩm) */
+        .featured .service-content {
+            background-color: #00b6b6;
+            color: white;
+        }
+
+            .featured .service-content h3,
+            .featured .service-content p {
+                color: white;
+            }
+
+        .dot-pagination {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd; /* màu xám */
+            transition: background-color 0.3s ease;
+        }
+
+            .dot.active {
+                background-color: #f15a24; /* màu cam */
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="sub-title">Dịch vụ của chúng tôi</p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+			<h1 class="main-title">Danh sách dịch vụ tại Sun Medical</h1>
+
+			<div class="search-box">
+				<div class="search-input">
+					<i class="fas fa-heartbeat icon-heart"></i>
+					<input type="text" placeholder="Tìm dịch vụ..">
+				</div>
+				<button class="search-button">
+					<i class="fas fa-search"></i> Tìm
+				</button>
+			</div>
+        </div>
+       
+
+        <div class="service-grid">
+            <!-- 1 -->
+            <div class="service-card featured">
+                <img src="~/images/Frame 37831.png" alt="Dược phẩm chính hãng">
+                <div class="service-content">
+                    <h3>Dược phẩm chính hãng</h3>
+                    <p>Cung cấp thuốc đúng chuẩn, đúng toa, đúng người. SunMedical – đồng hành cùng bạn trong từng đơn thuốc.</p>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="service-card">
+                <img src="~/images/Frame 37831 (1).png" alt="Khám tổng quát">
+                <div class="service-content">
+                    <h3>Khám tổng quát</h3>
+                    <p>Khám tổng quát định kỳ để bảo vệ sức khỏe toàn diện và phát hiện sớm bệnh lý. SunMedical đồng hành cùng bạn mỗi năm một lần.</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="service-card">
+                <img src="~/images/Frame 37831 (1).png" alt="Khám định kỳ">
+                <div class="service-content">
+                    <h3>Khám định kỳ</h3>
+                    <p>Khám sức khỏe định kỳ giúp phát hiện sớm các bệnh lý tiềm ẩn và theo dõi sức khỏe một cách chủ động. SunMedical đồng hành cùng..</p>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="service-card">
+                <img src="~/images/Frame 37831 (1).png" alt="Tim mạch">
+                <div class="service-content">
+                    <h3>Tim mạch</h3>
+                    <p>Trái tim khỏe cho cuộc sống trọn vẹn. Khám tim mạch định kỳ tại SunMedical để bảo vệ sức khỏe tim từ hôm nay.</p>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="service-card">
+                <img src="~/images/Frame 37831 (1).png" alt="Nha khoa">
+                <div class="service-content">
+                    <h3>Nha khoa</h3>
+                    <p>Nụ cười khỏe – cuộc sống vui. SunMedical giúp bạn chăm sóc răng miệng một cách nhẹ nhàng và chuyên nghiệp.</p>
+                </div>
+            </div>
+
+            <!-- 6 -->
+          @*   <div class="service-card">
+            <img src="~/images/Frame 37831 (1).png" alt="Tế bào gốc">
+                <div class="service-content">
+                    <h3>Tế bào gốc</h3>
+                    <p>Kích hoạt khả năng tự chữa lành của cơ thể với liệu pháp tế bào gốc tiên tiến tại SunMedical – chăm sóc từ gốc, khỏe từ bên trong.</p>
+                </div>
+            </div> *@
+        </div>
+        <div class="dot-pagination">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</body>
+</html>
