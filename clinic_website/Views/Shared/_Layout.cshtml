@@ -1,133 +1,246 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Sun Meidcal</title>
-	<link rel="icon" type="image/x-icon" href="~/images/icon_Group.png" />
-	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/clinic_website.styles.css" asp-append-version="true" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	<link href="~/css/layout.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sun Meidcal</title>
+    <link rel="icon" type="image/x-icon" href="~/images/icon_Group.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/clinic_website.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="~/css/layout.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/widgets.css">
+    <link rel="stylesheet" href="~/assets/css/color.css">
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/imgs/favicon.svg">
+    <!-- NewsViral CSS  -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/widgets.css">
+    <link rel="stylesheet" href="~/assets/css/color.css">
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+    <link href="~/assets/css/main.css" rel="stylesheet" />
 </head>
-<body style="margin-bottom:0px;">
-	<header>
-		<div class="header-top">
-			<div class="contact">
-				<span><i class="fas fa-map-marker-alt"></i> Ha Noi, Viet Nam</span>
-				<span><i class="fas fa-envelope"></i> <a href="mailto:support@carelink.com" style="text-decoration:none;color:#fff">support@carelink.com</a></span>
-				<span><i class="fas fa-phone"></i> +62 864 644 2222</span>
-				<div class="flags">
-					<img src="https://flagcdn.com/vn.svg" alt="Vietnam Flag">
-					<img src="https://flagcdn.com/jp.svg" alt="Japan Flag">
-					<img src="https://flagcdn.com/tw.svg" alt="Taiwan Flag">
-					<img src="https://flagcdn.com/gb.svg" alt="UK Flag">
-				</div>
-			</div>
-		</div>
-		<div class="header-main">
-			<div class="logo">
-				<img src="/images/Group.png" alt="SunMedical Logo">
-				<div class="toggle-menu" id="toggleMenu">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<nav class="mobile-nav" id="mobileNav">
-					<a href="#">Về SunMedical</a>
-					<a href="#">Chuyên Khoa</a>
-					<a href="#">Dịch Vụ Đặc Biệt</a>
-					<a href="#">Bác Sĩ</a>
-					<a href="#">Tin Tức</a>
-					<a href="#">Liên Hệ</a>
-					<a href="#">FAQ</a>
-					<a href="#" class="register">Đăng Nhập</a>
-				</nav>
-			</div>
-			
-			<div class="nav" style="align-items:center">
-				<a href="#">Về SunMedical</a>
-				<a href="#">Chuyên Khoa</a>
-				<a href="#">Dịch Vụ Đặc Biệt</a>
-				<a href="#">Bác Sĩ</a>
-				<a href="#">Tin Tức</a>
-				<a href="#">Liên Hệ</a>
-				<a href="#">FAQ</a>
-				<a href="#" class="register">Đăng Nhập</a>
-			</div>
-		</div>
-	</header>
-	<div >
-		<main role="main">
-			@RenderBody()
-		</main>
-	</div>
 
-	
-	<footer class="footer" style="">
-		<div class="footer-container">
-			<div class="footer-left">
-				<div class="footer-logo">
-					<img src="~/images/Group.png" alt="Sun Medical Center" height="50" />
-				</div>
-				<p class="footer-desc">
-					Mang đến dịch vụ y tế chất lượng cao với đội ngũ bác sĩ chuyên môn giỏi, trang thiết bị hiện đại và quy trình chăm sóc tận tâm. Chúng tôi cam kết bảo vệ sức khỏe của bạn và gia đình, cung cấp giải pháp y tế toàn diện từ phòng ngừa đến điều trị, giúp bạn an tâm và khỏe mạnh mỗi ngày.
-				</p>
-				<div class="footer-socials">
-					<a style="position: relative; width: 40px; height: 40px;">
-						<img src="/images/icon_fb1.png" alt="Nền trắng" style="width: 100%; height: 100%;">
-						<img src="/images/icon_fb1_1.png" alt="Facebook"
-							 style="position: absolute; top: 80%; left: 50%;
-              transform: translate(-50%, -50%);
-              width: 40%; height: 40%; object-fit: contain;">
-					</a>
-					<a href="#"><img style="width: 40px; height: 40px" src="~/images/icon_twitter.png" alt="Twitter" /></a>
-					<a href="#"><img style="width: 40px; height: 40px" src="~/images/icon_linked.png" alt="LinkedIn" /></a>
-				</div>
-			</div>
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="text-center">
+                    <h6>Loading</h6>
+                    <div class="loader">
+                        <div class="bar bar1"></div>
+                        <div class="bar bar2"></div>
+                        <div class="bar bar3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-wrap">
+        <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar position-right">
+            <button class="off-canvas-close"><i class="ti-close"></i></button>
+        </aside>
+        <!-- Main Header -->
+        <header class="main-header header-style-2">
+            <div class="header-top header-menutop">
+                <div class="contact">
+                    <span><i class="fas fa-map-marker-alt"></i> Ha Noi, Viet Nam</span>
+                    <span><i class="fas fa-envelope"></i> <a href="mailto:support@carelink.com" class="text-white">support@carelink.com</a></span>
+                    <span><i class="fas fa-phone"></i> +62 864 644 2222</span>
+                    <div class="flags">
+                        <img src="https://flagcdn.com/vn.svg" alt="Vietnam Flag">
+                        <img src="https://flagcdn.com/jp.svg" alt="Japan Flag">
+                        <img src="https://flagcdn.com/tw.svg" alt="Taiwan Flag">
+                        <img src="https://flagcdn.com/gb.svg" alt="UK Flag">
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom header-sticky background-white text-center">
+                <div class="scroll-progress gradient-bg-1"></div>
+                <div class="mobile_menu d-lg-none d-block"></div>
+                <div class="container p-0">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="header-logo d-none d-lg-block">
+                                <a href="index.html">
+                                    <img class="logo-img d-inline p-2" src="~/images/Group.png" width="255px" alt="">
+                                </a>
+                            </div>
+                            <div class="logo-tablet d-md-inline d-lg-none d-none">
+                                <a href="index.html">
+                                    <img class="logo-img d-inline" src="~/images/Group.png" alt="">
+                                </a>
+                            </div>
+                            <div class="logo-mobile d-block d-md-none">
+                                <a href="index.html">
+                                    <img class="logo-img d-inline" src="~/images/Group.png" width="200" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9 main-header-navigation">
+                            <!-- Main-menu -->
+                            <div class="main-nav text-left float-lg-left float-md-right">
+                                <ul class="mobi-menu d-none" id="navigation">
+                                    <li class="cat-item "><a href="#">Về SunMedical</a></li>
+                                    <li class="cat-item cat-item-3"><a href="#">Chuyên Khoa</a></li>
+                                    <li class="cat-item cat-item-4"><a href="#">Dịch Vụ Đặc Biệt</a></li>
+                                    <li class="cat-item cat-item-5"><a href="#">Bác Sĩ</a></li>
+                                    <li class="cat-item cat-item-6"><a href="#">Tin Tức</a></li>
+                                    <li class="cat-item cat-item-7"><a href="#">Liên Hệ</a></li>
+                                    <li class="cat-item cat-item-2"><a href="#">FAQ</a></li>
+                                    <li class="cat-item cat-item-2"><a href="#" class="main-menu d-none d-lg-inline btn-orrange ml-2">Đăng Nhập</a></li>
+                                </ul>
+                                <nav>
+                                    <ul class="main-menu d-none d-lg-inline">
+                                        <li>
+                                            <a href="#">
+                                                Về SunMedical
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Chuyên Khoa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Dịch Vụ Đặc Biệt
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Bác Sĩ
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Tin Tức
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Liên Hệ
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                FAQ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="main-menu d-none d-lg-inline btn-orrange ml-2">Đăng Nhập</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Wrap Start -->
+        <main class="position-relative">
+            @RenderBody()
+        </main>
+        <!-- Footer Start-->
+        <footer>
+            <div class="footer-area pt-50" style="background:#EDFFFF">
+                <div class="container">
+                    <div class="row pb-30">
+                        <div class="col-sm-6">
+                            <div class="footer-container">
+                                <div class="footer-left">
+                                    <div class="footer-logo">
+                                        <img src="~/images/Group.png" alt="Sun Medical Center" height="50" />
+                                    </div>
+                                    <p class="footer-desc">
+                                        Mang đến dịch vụ y tế chất lượng cao với đội ngũ bác sĩ chuyên môn giỏi, trang thiết bị hiện đại và quy trình chăm sóc tận tâm. Chúng tôi cam kết bảo vệ sức khỏe của bạn và gia đình, cung cấp giải pháp y tế toàn diện từ phòng ngừa đến điều trị, giúp bạn an tâm và khỏe mạnh mỗi ngày.
+                                    </p>
+                                    <div class="footer-socials">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-			<div class="footer-cols">
-				<div class="footer-col">
-					<h4>Company</h4>
-					<ul>
-						<li>Về chúng tôi</li>
-						<li>Dịch vụ</li>
-						<li>Đặt lịch</li>
-						<li>Tìm bác sĩ</li>
-						<li>Điều khoản</li>
-					</ul>
-				</div>
-
-				<div class="footer-col">
-					<h4>Support</h4>
-					<ul>
-						<li>Trung tâm hỗ trợ</li>
-						<li>Dịch vụ 24/7</li>
-						<li>Chat với chúng tôi</li>
-					</ul>
-				</div>
-
-				<div class="footer-col">
-					<h4>Contact</h4>
-					<ul>
-						<li>+1826535375535</li>
-						<li>+1843228662422</li>
-						<li>call@sunmedical.com</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<div class="footer-bottom">
-			<p>Copyright ©2025 <strong>SunMedical</strong></p>
-			<p>Design by <strong>Le Vu Media</strong></p>
-		</div>
-	</footer>
-	<script src="~/scripts/layout/layout.js"></script>
-	<script src="~/lib/jquery/dist/jquery.min.js"></script>
-	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="~/js/site.js" asp-append-version="true"></script>
-	@await RenderSectionAsync("Scripts", required: false)
+                        <div class="col">
+                            <ul class="float-left mr-30 font-medium">
+                                <li class="cat-item cat-item-2" style="font-weight:bold;margin-bottom:20px"><a href="category.html">Company</a></li>
+                                <li class="cat-item cat-item-3"><a href="#">Về chúng tôi</a></li>
+                                <li class="cat-item cat-item-4"><a href="#">Dịch vụ</a></li>
+                                <li class="cat-item cat-item-5"><a href="#">Đặt lịch</a></li>
+                                <li class="cat-item cat-item-6"><a href="#">Tìm bác sĩ</a></li>
+                                <li class="cat-item cat-item-7"><a href="#">Điều khoản</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="float-left mr-30 font-medium">
+                                <li class="cat-item cat-item-2" style="font-weight:bold;margin-bottom:20px"><a href="category.html">Support</a></li>
+                                <li class="cat-item cat-item-3"><a href="#">Về chúng tôi</a></li>
+                                <li class="cat-item cat-item-4"><a href="#">Dịch vụ</a></li>
+                                <li class="cat-item cat-item-5"><a href="#">Đặt lịch</a></li>
+                                <li class="cat-item cat-item-6"><a href="#">Tìm bác sĩ</a></li>
+                                <li class="cat-item cat-item-7"><a href="#">Điều khoản</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="float-left mr-30 font-medium">
+                                <li class="cat-item cat-item-2" style="font-weight:bold;margin-bottom:20px"><a href="category.html">Contact</a></li>
+                                <li class="cat-item cat-item-3"><a href="#">Về chúng tôi</a></li>
+                                <li class="cat-item cat-item-4"><a href="#">Dịch vụ</a></li>
+                                <li class="cat-item cat-item-5"><a href="#">Đặt lịch</a></li>
+                                <li class="cat-item cat-item-6"><a href="#">Tìm bác sĩ</a></li>
+                                <li class="cat-item cat-item-7"><a href="#">Điều khoản</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-bottom aera -->
+            <div class="footer-bottom-area text-muted" style="background:#EDFFFF">
+                <div class="container">
+                    <div class="footer-border pt-20 pb-20">
+                        <div class="row d-flex align-items-center justify-content-between">
+                            <div class="col-12">
+                                <div class="footer-copy-right">
+                                    <p class="font-small text-muted">Copyright ©2025 <strong>SunMedical</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End-->
+        </footer>
+    </div> <!-- Main Wrap End-->
+    <div class="dark-mark"></div>
+    <!-- Vendor JS-->
+    <script src="~/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="~/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="~/assets/js/vendor/popper.min.js"></script>
+    <script src="~/assets/js/vendor/bootstrap.min.js"></script>
+    <script src="~/assets/js/vendor/jquery.slicknav.js"></script>
+    <script src="~/assets/js/vendor/owl.carousel.min.js"></script>
+    <script src="~/assets/js/vendor/slick.min.js"></script>
+    <script src="~/assets/js/vendor/wow.min.js"></script>
+    <script src="~/assets/js/vendor/animated.headline.js"></script>
+    <script src="~/assets/js/vendor/jquery.magnific-popup.js"></script>
+    <script src="~/assets/js/vendor/jquery.ticker.js"></script>
+    <script src="~/assets/js/vendor/jquery.vticker-min.js"></script>
+    <script src="~/assets/js/vendor/jquery.scrollUp.min.js"></script>
+    <script src="~/assets/js/vendor/jquery.nice-select.min.js"></script>
+    <script src="~/assets/js/vendor/jquery.sticky.js"></script>
+    <script src="~/assets/js/vendor/perfect-scrollbar.js"></script>
+    <script src="~/assets/js/vendor/waypoints.min.js"></script>
+    <script src="~/assets/js/vendor/jquery.counterup.min.js"></script>
+    <script src="~/assets/js/vendor/jquery.theia.sticky.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- NewsViral JS -->
+    <script src="~/assets/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
