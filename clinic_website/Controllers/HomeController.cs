@@ -17,6 +17,10 @@ namespace clinic_website.Controllers
         {
             return View();
         }
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
