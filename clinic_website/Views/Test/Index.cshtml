@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản trị nội dung - Dịch vụ của chúng tôi</title>
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+
+        .admin-container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+        .btn-save {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+            .btn-save:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <h2>Quản trị nội dung: Dịch vụ của chúng tôi</h2>
+        <form id="adminForm">
+            <div class="form-group">
+                <label for="title">Tiêu đề chính:</label>
+                <input type="text" id="title" name="title" placeholder="Nhập tiêu đề chính...">
+            </div>
+
+            <div class="form-group">
+                <label for="editor">Nội dung chi tiết:</label>
+                <textarea name="editor" id="editor" rows="20">
+                    <!-- Dữ liệu mẫu ban đầu hoặc trống -->
+                </textarea>
+            </div>
+
+            <button type="submit" class="btn-save">Lưu nội dung</button>
+        </form>
+    </div>
+
+    <script>
+        // Khởi tạo CKEditor
+        CKEDITOR.replace('editor', {
+            filebrowserUploadUrl: '/upload-image',  // cần backend xử lý route này nếu bạn muốn upload ảnh thực tế
+            filebrowserUploadMethod: 'form'
+        });
+
+        // Xử lý submit form (demo)
+        document.getElementById('adminForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const title = document.getElementById('title').value;
+            const content = CKEDITOR.instances.editor.getData();
+
+            console.log("Tiêu đề:", title);
+            console.log("Nội dung HTML:", content);
+
+            // Gửi dữ liệu lên server bằng fetch/ajax nếu cần
+        });
+    </script>
+</body>
+</html>
